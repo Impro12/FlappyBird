@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BGCollector : MonoBehaviour {
 
@@ -37,7 +38,7 @@ public class BGCollector : MonoBehaviour {
 
     }
 
-    void OnTrigerEnter2D(Collider2D target)
+    void OnTriggerEnter2D(Collider2D target)
     {
         if(target.tag == "Background")
         {
@@ -48,17 +49,20 @@ public class BGCollector : MonoBehaviour {
 
             target.transform.position = temp;
             lastBGX = temp.x;
-        } else if(target.tag=="Ground")
+        }
+        else if(target.tag == "Ground")
         {
 
                 Vector3 temp = target.transform.position;
+
                 float width = ((BoxCollider2D)target).size.x;
 
                 temp.x = lastGroundX + width;
 
                 target.transform.position = temp;
                 lastGroundX = temp.x;
-            
+            Debug.Log("Its ok");
         }
+     
     }
 }
