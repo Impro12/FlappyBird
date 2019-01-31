@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 95260928542796940}
   - component: {fileID: 58676710533417250}
   - component: {fileID: 50189623079548492}
-  m_Layer: 0
+  - component: {fileID: 114713506412723160}
+  m_Layer: 11
   m_Name: Flappy Bird Green
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4220662023044160
 Transform:
   m_ObjectHideFlags: 1
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1424541404024756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.18, y: -0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +97,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114713506412723160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424541404024756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f42a3cd47aba5499624a563d77e5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigitBody: {fileID: 50189623079548492}
+  anim: {fileID: 95260928542796940}
+  isAlive: 0
+  audioSource: {fileID: 0}
+  flapClick: {fileID: 8300000, guid: 13d44cc9200547e46840888964d3923a, type: 3}
+  pointClip: {fileID: 8300000, guid: 1dfdd960104c3774e816e3e70d66d586, type: 3}
+  diedClip: {fileID: 8300000, guid: c46524a300aba1148bcd3428175237b4, type: 3}
+  score: 0
 --- !u!212 &212993543391801082
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -128,9 +148,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 530025951
+  m_SortingLayer: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300008, guid: b0d45b016f4f38d409cbd62994843916, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

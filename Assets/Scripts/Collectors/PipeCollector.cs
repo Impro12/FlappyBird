@@ -34,7 +34,7 @@ public class PipeCollector : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider2D target)
+    void OnTriggerEnter2D(Collider2D target)
     {
         if (target.tag == "PipeHolder")
         {
